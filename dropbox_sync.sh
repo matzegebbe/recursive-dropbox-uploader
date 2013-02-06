@@ -22,7 +22,6 @@
 
 
 
-#UPLOADER=/opt/Dropbox-Uploader/dropbox_uploader.sh
 UPLOADER=./dropbox_uploader.sh
 
 IFS=$'\012'
@@ -64,10 +63,11 @@ done
 
 if [ -z $1 ] 
 	then
+	
 	echo ''
 	echo 'recursive download for Dropbox Uploader -- downloads all subdirectories and files in your local folder'
 	echo 'This is a fork of "andreafabrizi Dropbox-Uploader". It allows to download hole directories and not only specified files.'
-	echo '
+	echo ''
 	echo 'set the var UPLOADER in this skript or put it in the same directory as your dropbox_uploader.sh script!'
 	echo 'usage: ./dropbox_sync.sh /FOLDER_IN_DROPBOX/SUB_FOLDER_IN_DROPBOX/ /PATH/TO/LOCAL/FOLDER'
 	echo 'usage: ./dropbox_sync.sh / /PATH/TO/LOCAL/FOLDER'
@@ -75,6 +75,7 @@ if [ -z $1 ]
 	echo ''
 	echo 'https://github.com/matzegebbe/recursive-dropbox-uploader'
 else 
+
 	TARGET_DIR=$2
 	down_dir $1
 
